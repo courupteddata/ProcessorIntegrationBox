@@ -1,0 +1,10 @@
+{
+  "*": {
+    "output_files": ["example.txt"],
+    "input_byte_match": ""
+  },
+  "example_input.txt": {
+    "output_files": ["example.txt"],
+    "input_byte_match": ""
+  }
+}
