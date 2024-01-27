@@ -1,9 +1,10 @@
-FROM centos:7
+FROM rockylinux:9
 
 ENV FTP_USER=1002
 ENV FTP_GROUP=1002
 
 RUN yum install -y openssh-server python3 && \
+    rm -f /var/run/nologin /etc/nologin && \
     groupadd -g ${FTP_GROUP} sftp_user && \
     mkdir -p /app/transfer/sftp/in /app/transfer/sftp/out && \
     useradd -rm -d /app/transfer/sftp -g ${FTP_GROUP} -u ${FTP_USER} sftp_user && \

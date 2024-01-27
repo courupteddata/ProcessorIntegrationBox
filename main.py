@@ -7,8 +7,8 @@ from pathlib import Path
 from typing import List, Optional
 
 # In and out directories
-INPUT_DIRECTORY = Path("/app/sftp/in")
-OUTPUT_DIRECTORY = Path("/app/sftp/out")
+INPUT_DIRECTORY = Path("/app/transfer/sftp/in")
+OUTPUT_DIRECTORY = Path("/app/transfer/sftp/out")
 # Config file and holding place for possible output files
 CONFIG_FILE = Path("/app/config.json")
 OUTPUT_FILES = Path("/app/outputfiles/")

@@ -23,8 +23,14 @@ This is a simple script to emulate a processor that takes in a file via sftp and
 
 ### Example Running
 ```shell
-docker build -f dockerfile/centos7.Dockerfile -t centos7-sftp .
+docker build -f dockerfiles/centos7.Dockerfile -t centos7-sftp .
 docker run -it -p 2222:22 --rm centos7-sftp
+
+docker build -f dockerfiles/rockylinux8.Dockerfile -t rockylinux8-sftp .
+docker run -it -p 2222:22 --rm rockylinux8-sftp
+
+docker build -f dockerfiles/rockylinux9.Dockerfile -t rockylinux9-sftp .
+docker run -it -p 2222:22 --rm rockylinux9-sftp
 
 # sshing which is disabled would be accomplished via
 ssh -p 2222 sftp_user@localhost
